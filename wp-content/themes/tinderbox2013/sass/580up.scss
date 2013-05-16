@@ -1,0 +1,20 @@
+@media screen and ('min-width:580px') {
+
+	/* Client Stories */
+	
+	a.client-block {
+		margin: 0 5% 5% 0;
+		width: 30%;
+		float: left
+	}	
+	.content a.client-block:nth-child(3n) {
+		margin: 0 0 5%;
+	}
+	.content a.client-block:nth-child(3n+1) {
+		clear: left
+	}
+	a.client-block .client-thumb figure img {
+		width: 80%
+	}	
+
+}

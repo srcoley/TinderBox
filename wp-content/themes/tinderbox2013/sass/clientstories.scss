@@ -1,0 +1,110 @@
+a.client-block {
+	display: block;
+	background: #fff;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2));
+	text-align: center;
+	margin: 0 0 5%;
+}
+a.client-block:hover {
+	@include box-shadow(0 2px 5px rgba(0,0,0,0.3));
+}
+a.client-block .client-thumb {
+	display: table;
+	height: em(120);
+	width: 100%;
+	text-align: center;
+	vertical-align: middle
+}
+a.client-block .client-thumb figure {
+	display: table-cell;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	@include box-shadow(none);
+	background: none;
+}
+a.client-block .client-thumb figure img {
+	width: auto;
+	max-width: 80%;
+	height: auto;
+	display: block;
+	margin: 0 auto
+}
+h2.organization-type {
+	font-size: em(12);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 300;
+	background: $darkgreen;
+	color: $lightgreen;
+	padding: 0 1em;
+	margin: 0;
+	height: 2em;
+	line-height: 2em;
+	overflow: hidden
+}
+.client-stats {
+	margin: 0 0 2.5em;
+	background: #fff;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2))
+}
+.client-stats figure {
+	padding: 1.5em 4%;
+	margin: 0 0 1em;
+	border-bottom: solid 1px #e6e6e6;
+	@include box-shadow(none)
+}
+.client-stats-inner {
+	padding: 1.5em;
+}
+.client-stat {
+	margin:1.5em 0;
+	color: #777;
+	line-height: 1;
+}
+.client-stats b {
+	font-size: em(36);
+	font-weight: 300;
+	color: #9ed265
+}
+.donut-chart-contain {
+	position: relative;
+	width: em(160);
+	height: em(160);
+	margin-bottom: 1.5em
+}
+.donut-chart-contain #donutchart {
+	position: absolute;
+	z-index: 1;
+}
+.donut-chart-contain .close-rate {
+	font-size: em(12);
+	font-weight: 300;
+	position: absolute;
+	z-index: 9;
+	text-align: center;
+	top: em(54,12);
+	left: 0;
+	width: 100%;
+	line-height: 1;
+	text-transform: uppercase;
+	color: #777;
+	letter-spacing: 1px;
+}
+.donut-chart-contain .close-rate span {
+	font-size: 36px;
+	color: #555;
+	letter-spacing: normal;
+	font-weight: 700
+}
+.donut-chart-contain .close-rate span.fallback-rate {
+	display: none;
+}
+h2.more-clients {
+	margin: 4em 0 5%;
+	text-align: center;
+	border-bottom: solid 1px #e6e6e6;
+	padding-bottom: 5%;
+	line-height: .8
+}

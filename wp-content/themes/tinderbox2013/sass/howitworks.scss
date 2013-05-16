@@ -1,0 +1,11 @@
+.feature figure {
+	float: right;
+	padding: em(10);
+	margin: 0 0 1.5em 5%;
+	background: #fff;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2))
+}
+.feature h2 {
+	color: $orange;
+	font-size: em(30);
+}

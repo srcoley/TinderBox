@@ -1,0 +1,38 @@
+/*!
+Theme Name: TinderBox 2013
+Author: Justin Zalewski (KA+A)
+Author URI: http://kaplusa.com
+Version: 1.0
+*/
+
+$darkgray: #555;
+$medgray: #777;
+$orange: #DC6B36;
+$lightgreen: #E2E6E7;
+$medgreen: #9EACAF;
+$darkgreen: #535f62;
+$blue: #5ea5b5;
+$lightblue: #a3ced8;
+
+@import "bourbon";
+@import "normalize";
+@import "base";
+@import "global";
+@import "header";
+@import "footer";
+@import "sidebar";
+@import "page";
+@import "homepage";
+@import "blog";
+@import "clientstories";
+@import "resources";
+@import "press";
+@import "howitworks";
+
+@import "480up";
+@import "580up";
+@import "640up";
+@import "840up";
+@import "960up";
+@import "ie";
+@import "print";

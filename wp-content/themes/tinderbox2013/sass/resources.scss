@@ -1,0 +1,87 @@
+article.resource {
+	padding: 0 0 em(36);
+	margin: 0 5%;
+	border: none;
+}
+article.resource figure {
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2));
+	padding: 3px;
+	background: #fff;
+	position: relative;
+}
+article.resource h2 {
+	margin-top: 1em
+}
+article.primary-featured-resource {
+	background: #fff;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+	border: none;
+	padding: em(20) 5% em(36);
+	margin-bottom: em(36)
+}
+article.primary-featured-resource figure {
+	@include box-shadow(none);
+	border: solid 1px #e6e6e6;
+	padding: 0;
+}
+article.primary-featured-resource figure img,
+article.secondary-featured-resource figure img,
+article.resource figure img {
+	display: block;
+	position: relative;
+}
+article.primary-featured-resource p.view-resource {
+	margin-bottom: 0
+}
+article.resource p.resource-type,
+article.secondary-featured-resource p.resource-type,
+article.primary-featured-resource p.resource-type {
+	position: absolute;
+	z-index: 88;
+	left: 6px;
+	top: 6px;
+	margin: 0 0 1em;
+	padding: 0 .5em;
+	font-size: em(10);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+	font-weight: 700;
+	line-height: 1.75em;
+	height: 1.5em;
+}
+article.primary-featured-resource p.resource-type {
+	margin: 0 0 em(20,12);
+	font-size: em(12)
+}
+article.Whitepaper p.resource-type {
+	background: #9ED265;
+}
+article.Infographic p.resource-type {
+	background: $blue;
+}
+article.Webinar p.resource-type {
+	background: #b16ec7;
+}
+article.clientstories p.resource-type {
+	background: #6ec7b3
+}
+
+article.clientstories figure {
+	padding: 7.5% 15%
+}
+
+
+/* Events */
+
+.upcoming-event.events-list {
+	margin: em(24) 0 em(48);
+	padding-bottom: em(44);
+	border-bottom: solid 1px #e6e6e6
+}
+.upcoming-event.events-list h2 {
+	font-weight: 700;
+	color: $orange;
+	line-height: 1.2;
+	margin-bottom: .5em
+}

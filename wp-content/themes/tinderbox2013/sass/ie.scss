@@ -1,0 +1,45 @@
+.lt-ie9 {
+
+	header {
+		border-bottom: solid 1px #c6c6c6;
+	}
+	.logo a {
+	  width: 137px;
+	  height: 30px;
+	  background: url('images/tinderbox-logo.png') no-repeat left top;
+	  background-size: 137px 30px;
+	}
+	header input#searchsubmit {
+		background: url('images/search.png') no-repeat center center;
+		background-size: 18px 18px
+	}
+	footer form input#searchsubmit {
+		background: #d6dbdc url('images/search.png') no-repeat center center;
+		background-size: 12px 12px;
+	}
+	#sharebox {
+		height: 0;
+		padding: 0;
+		overflow: hidden
+	}
+	.open #sharebox {
+		padding: 1em;
+		height: auto;
+	}	
+	#headernav {
+		top: 0;
+		margin-top: em(-20)
+	}			
+	#headernav ul .sub-menu,
+	#headernav ul .children {
+		top: em(24);
+		border: solid 1px #c6c6c6
+	}
+	#donutchart {
+		display: none
+	}
+	.donut-chart-contain .close-rate span.fallback-rate {
+		display: inline;
+	}
+	
+} 

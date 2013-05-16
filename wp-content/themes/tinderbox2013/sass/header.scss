@@ -1,0 +1,149 @@
+header {
+	position: fixed;
+	z-index: 999;
+	top:0;
+	height: 60px;
+	width: 100%;
+	background: #fff;
+}
+header .container {
+	width: 100%;
+}
+header .header-top {
+	background: #fff;
+	z-index: 9999;
+	height: 60px;
+	width: 100%;
+	position: relative;
+	padding: 10px 5% 0;
+	@include box-shadow(0 2px 2px rgba(0,0,0,0.4))
+}
+.logo {
+	margin: 0;
+	padding: 0
+}
+.logo a {
+	float: left;
+	display: block;
+	text-align: left;
+	text-indent: -9999px;
+	width: 137px;
+	height: 30px;
+	background: url('images/tinderbox-logo.svg') no-repeat left top;
+	background-size: 137px 30px;
+	@include transition(opacity 0.2s ease-out)
+}
+.logo a:hover {
+	opacity: 0.67;
+}
+header form {
+	display: none
+}
+#headernav.active form {
+	display: block
+}
+header form {
+	padding: 8px;
+	clear: both;
+	float: left;
+	position: relative;
+	width: 100%;
+	background: #F6F6F6;
+	border-top: solid 1px #e6e6e6
+}
+header input#s {
+	width: 100%;
+	padding:0 24px 0 8px;
+	height: 28px;
+	line-height: 28px;
+	border: solid 1px #E6E6E6;
+	background: #fff;
+	border-radius: 14px;
+	@include transition(all 0.2s ease-out);
+	@include box-sizing(border-box)
+}
+header input#s:focus {
+	background: #fff;
+	outline: none
+}
+header input#searchsubmit {
+	position: absolute;
+	right: 16px;
+	top:13px;
+	border: none;
+	display: block;
+	text-align: left;
+	text-indent: -9999px;
+	width: 18px;
+	height: 18px;
+	background: url('images/search.svg') no-repeat;
+	background-size: 18px 18px;
+}
+header label.screen-reader-text {
+	display: none
+}
+.menu-toggle {
+	position: fixed;
+	top:0;
+	right: 5%;
+	background: $orange;
+	color: #fff;
+	height: 48px;
+	width: 48px;
+	text-align: center;
+	font-size: em(30);
+	line-height: em(48,30)
+}
+.menu-toggle span.x-icon {
+	display: none;
+}
+.menu-toggle.active span.menu-icon svg {
+	width: em(25,30);
+	height: em(21,30);
+}
+.menu-toggle.active span.x-icon {
+	display: block;
+	font-weight: 700;
+	font-size: em(48,30);
+	line-height: em(50,48);
+}
+.menu-toggle.active span.menu-icon {
+	display: none
+}
+#headernav ul li a {
+	font-weight: 700;
+	color: #555;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: block;
+	padding: .5em 1em;
+	border-top: solid 1px #e6e6e6;
+}
+#headernav ul ul li a:hover {
+	background: #fafafa;
+	color: $orange
+}
+#headernav ul li:first-child a {
+	border-top: none
+}
+#headernav ul ul {
+	display: none
+}
+#headernav ul ul li a {
+	font-weight: 300;
+	padding: 0 0 0 10%;
+}
+#headernav {
+	position: fixed;
+	left: 5%;
+	z-index: 9;
+	top: -110px;
+	width: 90%;
+	background: #fff;
+	border: solid 1px #e6e6e6;
+	@include transition(all 0.2s ease-out);
+}
+#headernav.active {
+	top: 60px;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2));
+}

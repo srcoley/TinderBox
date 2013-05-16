@@ -1,0 +1,118 @@
+@media screen and ('min-width:480px') {
+
+	/* Footer */
+	
+	footer .logo {
+		float: left;
+		margin: 0 0 12px;
+	}
+	footer p {
+		text-align: right;
+		clear: none;
+		margin: 0
+	}
+	
+	.page-bottom-cta p.cta-lead-in {
+		font-size: em(24);
+		line-height: em(30,24);
+		margin: 0 0 .6666667em;
+		padding-left: 25.4702%;
+	}	
+	.page-bottom-cta a.cta {
+		float: left;
+		margin: 0;
+		width: auto;
+		padding: 0 em(40)
+	}
+
+	.page-cta a.cta {
+		width: 50%;
+	}
+	
+
+
+	/* Page */
+
+	article blockquote {
+		padding: 0 1.5em;
+		border-left: solid 4px $blue
+	}
+	
+
+	/* Client Stories */
+	
+	.client-stats figure {
+		margin: 0
+	}
+	.client-stat {
+		margin: 1em 0 0
+	}
+	.donut-chart-contain {
+		float: left;
+		margin: 0 1.5em 0 0;
+	}
+	
+	/* Press Pages */
+	
+	article.media-item figure.mediathumb {
+		float: left;
+		margin:0 4% 0 0;
+		width: 33.333333%;
+		height: auto;
+	}
+	article.media-item h2 {
+		margin: 0;
+		padding-left: 37.33333333%;
+	}
+
+	
+	/* Awards and Recognition */
+	
+	.award figure.awardimg {
+		float: right;
+		width: auto;
+		max-width: 160px;
+		height: auto;
+		margin: 0 0 24px 24px;
+	}
+	
+	
+	/* Resources */
+	
+	article.resource {
+		width: 40%;
+		margin: 0 5%;
+		float: left;
+	}	
+	article.resource:nth-child(odd) {
+		clear: left
+	}
+	article.resource p {
+		font-size: em(14);
+		line-height: em(24,14)
+	}
+	article.resource h2 {
+		font-size: em(18,14);
+		line-height: em(24,18)
+	}
+	article.primary-featured-resource {
+		float: none;
+		width: 100%;
+		margin: 0 0 10%;
+	}
+	article.resource.primary-featured-resource figure {
+		float: none;
+		width: 100%;
+		margin: 0;
+		padding: 0
+	}	
+	article.resource.primary-featured-resource {
+		margin-bottom: 10%;
+	}
+	article.resource.primary-featured-resource h2 {
+		line-height: 1.2;
+		font-size: em(30);
+		margin-top: em(24,30)
+	} 
+	
+}

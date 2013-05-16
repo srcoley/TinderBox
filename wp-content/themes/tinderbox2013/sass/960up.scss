@@ -1,0 +1,57 @@
+@media screen and ('min-width:960px') {
+
+	/* Footer */
+	
+	#footnav ul li {
+		width: 15%;
+		padding:0 1.5%;
+	}
+	#footnav ul.search-signup li {
+		width: 22.5%;
+		padding: 0 0 0 2.5%;
+	}	
+	#footnav ul li:first-child {
+		padding-left: 0;
+	}
+	#footnav ul.search-signup li {
+		padding-right: 0;
+		padding-left: 2.5%
+	}	
+	#footnav ul ul li {
+		padding: 0;
+	}
+	#footnav ul li:nth-child(3n+1) {
+		clear: none
+	}
+
+	
+	/* Home */
+
+	.hero p {
+		text-align: left;
+		line-height: 1;
+		float: left;
+		margin-top: 4em
+	}
+	.hero .cta {
+		float: right;
+		margin: 5.75em em(20) 0 0;
+		width: 25%;
+	}
+	.for-bucket h2 {
+		font-size: em(30);
+		padding: em(36,30) em(20,30) 0;
+		-webkit-font-smoothing: antialiased
+	}
+	.manifesto {
+		padding: 3em 3.333333333%;
+	}
+	
+
+	/* Client Stories */
+	
+	.client-stats-inner {
+		padding-left: 2.5em;
+	}
+	
+}

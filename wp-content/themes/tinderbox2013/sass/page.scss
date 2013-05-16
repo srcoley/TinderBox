@@ -1,0 +1,186 @@
+.title-background {
+	background: #4A5557 url('images/title-bg.png') repeat left top;
+	height: em(48);
+	width: 100%;
+	position: absolute;
+	top:60px;
+	left: 0;
+	z-index: 0;
+}
+.content h1,
+.content h2.page-title {
+	font-weight: 300;
+	color: #f6f6f6;
+	font-size: em(24);
+	line-height: em(48,24);
+	height: em(48,24);
+	margin: em(-48,24) 0 em(36,24);
+	z-index: 9;
+	position: relative
+}
+.error404 .content h1,
+.blog .content h1 {
+	margin-top: 0
+}
+.single .content h2.page-title {
+	margin: 0 0 3.5em
+}
+.single-resources .content h2.page-title,
+.single-pressreleases .content h2.page-title {
+	margin: -2em 0 3.5em;
+}
+p.large-intro {
+	color: $orange;
+	font-weight: 700;
+	font-size: em(30);
+	line-height: em(36,30);
+	margin: 0 0 em(36,30);
+}
+p.small-intro {
+	font-size: em(24);
+	line-height: em(36,24);
+	margin: 0 0 em(36,24);
+	color: #777
+}
+article h3 {
+	font-size: 1em;
+	margin: 0
+}
+article ul {
+	margin-bottom: 1.5em
+}
+article li {
+	margin-top: 8px
+}
+article blockquote {
+	font-size: em(20);
+	line-height: em(30,20);
+	color: $blue;
+	margin: 1.333333em 0;
+	font-style: italic
+}
+
+.page-cta {
+	background: #fff;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2));
+	margin: em(48) 0;
+	padding: em(24);
+}
+.page-cta p {
+	font-size: 1em;
+	margin: 0 0 1em;
+	text-align: center;
+	font-weight: 700
+}
+.page-cta p.cta-contain {
+	margin: 0;
+	font-weight: 300
+}
+.page-cta a.cta {
+	border-radius: em(20);
+	line-height: em(40);
+	height: em(40);
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+}
+
+.page-bottom-cta {
+	background: #fff;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2));
+	margin: em(48) 0;
+	padding: em(36);
+}
+.page-bottom-cta figure {
+	float: left;
+	margin: 0 6.357149% 0 0;
+	width: auto;
+	width: 19.113095%;
+	height: auto;
+	border-radius: 60px;
+	overflow: hidden
+}
+.page-bottom-cta figure img {
+	width: 100%;
+	height: auto;
+}
+.page-bottom-cta p.cta-lead-in {
+	font-size: em(16);
+	line-height: em(24,16);
+	margin: 0 0 1.5em;
+	padding-left: 25.4702%;
+}
+.page-bottom-cta a.cta {
+	border-radius: em(20);
+	line-height: em(40);
+	height: em(40);
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+}
+
+
+/* Form Elements */
+
+.wpcf7 p {
+	margin-top: 0
+}
+.content input, .content textarea, .content .customSelect { 
+	width: 100%;
+	background: #fff;
+	border: solid 1px #c6c6c6;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.1) inset);
+	padding: 0 .5em;
+	line-height: 1.5em;
+	height: 2em;
+	@include transition(all 0.2s ease-out);
+	border-radius: em(3);
+}
+.content textarea {
+	height: 10em;
+	padding: .5em;
+}
+.content input:focus, .content textarea:focus {
+	border: solid 1px $orange;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.1) inset, 0 1px 2px rgba(0,0,0,0.2));
+	outline: none
+}
+.content .customSelect {
+	line-height: 2em
+}
+.content .customSelect:before,
+.content .customSelect:after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: .5em;
+	top: .2em;
+	@include triangle(1em, #fff, down)
+}
+.content .customSelect:before {
+	top:.45em;
+	@include triangle(1em, #c6c6c6, down)
+}
+.content .customSelectInner {
+	width: 100% !important
+}
+.content input[type="submit"] {
+	background: $orange;
+	color: #fff;
+	height: em(40);
+	line-height: em(40);
+	padding: 0;
+	border-radius: em(20);
+	border: none
+}
+.content input[type="submit"]:hover, .content input[type="submit"]:focus {
+	background: shade($orange,10%);
+	@include box-shadow(none)
+}
+.contact-address {
+	padding-top: 1.2em
+}

@@ -1,0 +1,108 @@
+.blog article {
+	margin-bottom: em(24);
+	padding-bottom: em(24);
+}
+.archive .excerpt-contain,
+.search .excerpt-contain,
+.blog .excerpt-contain,
+.single-post figure {
+	background: #fff;
+	padding: 1.5em;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2))
+}
+.single-post figure {
+	padding: em(10);
+	text-align: center
+}
+.blog .excerpt-contain figure {
+	text-align: center
+}
+.blog .excerpt-contain p {
+	margin: 1.5em 0;
+}
+.blog article p.readmore {
+	margin-bottom: 0;
+	font-weight: 700;
+}
+.blog article h2,
+.single article h1.post-title {
+	font-size: em(30);
+	line-height: em(36,30);
+	margin-bottom: em(8,24);
+	color: $orange;
+	font-weight: 700;
+	height: auto
+}
+.meta {
+	font-size: em(14);
+	height: em(48,14);
+	line-height: em(48,14);
+	border-top: solid 1px #e6e6e6;
+	color: $darkgray;
+}
+.meta a {
+	color: $darkgreen
+}
+.share {
+	float: right;
+	display: block
+}
+.share:hover {
+	cursor: pointer
+}
+.share svg {
+	width: em(15,14);
+	height: em(12,14);
+}
+.share svg path {
+	fill: $medgray;
+	@include transition(all 0.2s ease-out)
+}
+.share:hover svg path {
+	fill: $orange
+}
+.sharebox-contain {
+	position: relative;
+}
+#sharebox {
+	opacity:0;
+	@include transition(all 0.2s ease-out);
+	position: absolute;
+	right: em(-4);
+	top: em(8);	
+	width: 136px;
+	background: #fff;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2));
+	padding: 1em;
+	line-height: 1
+}
+#sharebox:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top:em(-20);
+	right:em(14);
+	@include triangle(18px, #e6e6e6, up)
+}
+#sharebox:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top:em(-19);
+	right:em(14);
+	@include triangle(18px, #fff, up)
+}
+#sharebox span {
+	display: block;
+	margin-top: 6px;
+	height: auto;
+	line-height: em(26,14);
+	height: em(26,14)
+}
+#sharebox span:first-child {
+	margin-top: 0;
+}
+.open #sharebox {
+	opacity: 1;
+	top: em(-8);
+}

@@ -1,0 +1,227 @@
+.hero {
+	width: 100%;
+	overflow: hidden;
+	background: #4e595c url('images/home-hero-min.jpg') no-repeat center center;
+	background-size:cover;
+	color: #fff;
+	@include box-shadow(0 -2px 2px rgba(0,0,0,0.4) inset)	
+}
+.hero p {
+	font-size: em(24);
+	text-align: center
+}
+.hero .cta {
+	font-size: em(18);
+	height: em(40,18);
+	line-height: em(40,18);
+	border-radius: em(20,18);
+	text-align: center;
+	display: block;
+	margin: 0 auto 2em;
+	width: 80%
+}
+.for-bucket {
+	background: #fff;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+	@include transition(all 0.2s ease-out);
+	margin: 5% 0;
+}
+.for-bucket:hover {
+	@include box-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+.for-bucket img {
+	float: right;
+	margin: em(20) em(20) 0 0;
+}
+.for-bucket h2 {
+	color: #777;
+	font-size: em(30);
+	line-height: 1;
+	font-weight: 300;
+	padding: em(20,30) em(20,30) 0;
+	margin: 0;
+}
+.for-bucket p {
+	line-height: em(20);
+	color: #555;
+	padding: 18px;
+	padding: em(20,16);	
+	margin: 0;
+}
+.for-bucket p.bucket-cta {
+	font-weight: bold;
+	color: $orange;
+	border-top: solid 1px #e6e6e6;
+}
+.upcoming-event {
+	margin: em(48) 0 ;
+}
+.upcoming-event p.event-date {
+	float: left;
+	color: $darkgreen;
+	font-weight: 300;
+	text-align: center;
+	width: em(72);
+	background: #fff;
+	@include box-shadow(0 1px 2px rgba(0,0,0,0.2));
+	padding: 0;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0 5% 5% 0;
+}
+.event-date span {
+	width: 100%;
+	display: block;
+	padding: .25em 0;
+	line-height: 1;
+}
+.event-date span.event-month {
+	background: $darkgreen;
+	color: #f6f6f6;
+}
+.event-date span.event-day {
+	font-size: em(28);
+	font-weight: 700
+}
+.upcoming-event p {
+	clear: left
+}
+p.upcoming-event-tag {
+	font-size: em(12);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	color: #aaa;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	clear: none
+}
+.upcoming-event h2 {
+	font-size: em(24);
+	margin: 0 0 1em;
+	font-weight: 300;
+}
+.upcoming-event a.cta {
+	height: em(40);
+	line-height: em(40);
+	border-radius: em(20);
+	background: $medgreen;
+	text-align: center;
+	margin: 0 auto;
+	width: 80%
+}
+.upcoming-event a.cta:hover {
+	background: shade($medgreen,10%)
+}
+.home-resources {
+	background: $lightgreen;
+	@include box-shadow(0 2px 2px rgba(0,0,0,0.1) inset);
+	color: $darkgreen;
+	padding: em(48) 0 0;
+	overflow: hidden
+}
+.home-resource {
+	margin-bottom: em(48)
+}
+.home-resource-type {
+	font-size: em(12);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-top: em(4,12);
+	border-top: solid 2px $medgreen;
+	margin: 0
+}
+.home-resource-title {
+	font-size: em(24);
+	line-height: 1em;
+	font-weight: 700;
+	margin: em(18,24) 0;
+}
+p.home-resource-description {
+	font-size: em(14);
+	line-height: em(18,14);
+}
+a.home-resource-link {
+	font-weight: 700
+}
+a.home-resource-link:hover {
+	color: #9EACAF;
+}
+.manifesto {
+	background: #fff;
+	padding: 5.5555555% 5.55555555% 8.1111111111%;
+	@include box-shadow(0 1px 4px rgba(0,0,0,0.2));
+	text-align: center;
+	color: $darkgreen;
+	margin-bottom: -2.5%;
+	@include transition(all 0.2s ease-out)
+}
+.manifesto:hover {
+	margin-bottom: 0;
+	margin-top: -2.5%;
+}
+.manifesto h2 {
+	margin: em(10,24) 0 em(21,24);
+	line-height: em(21,24)
+}
+.manifesto p {
+	line-height: em(21)
+}
+.manifesto span {
+	color: $orange;
+	font-weight: 700
+}
+.manifesto svg {
+	width: 31px;
+	height: 46px;
+}
+.home-clients {
+	text-align: center;
+	padding: em(48) 0 0;
+	@include box-shadow(0 -2px 2px rgba(0,0,0,0.1));
+}
+.home-clients h2 {
+	font-weight: 300;
+	margin: 0
+}
+.home-clients ul,
+.home-clients li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline;
+	display: inline-block;
+	height: em(120);
+	width: 100%;	
+}
+.home-clients ul {
+	overflow: hidden;
+	display: block
+}
+.home-clients li {
+	width: 30%;
+	margin: 0 1.65%;
+}
+.home-clients li .client-logo {
+	display: table;
+	height: 100%;
+	width: 100%;
+	text-align: center
+}
+.home-clients li a {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+}
+.home-clients li img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	@include transition(all 0.2s ease-out);
+}
+.home-clients li img:hover {
+	opacity: 0.8;
+}
