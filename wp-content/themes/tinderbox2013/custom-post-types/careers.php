@@ -1,6 +1,6 @@
 <?php
 
-	// Add support for Open Position post type
+	// Add support for Careers post type
 	add_action('init', 'careers_register');
 	 
 	function careers_register() {

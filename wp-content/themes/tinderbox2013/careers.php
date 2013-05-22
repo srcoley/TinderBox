@@ -30,13 +30,11 @@
 			$args = array( 'post_type' => 'careers', 'posts_per_page' => 10, 'nopaging' => 'false'  );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
-			    echo '<article><h2><a href="';
+			    echo '<article class="career"><h2><a href="';
 			    the_permalink();
 			    echo '">';
 				the_title();
-				echo '</a></h2><p class="the-date">';
-			    echo get_the_date();
-			    echo '</p>';
+				echo '</a></h2>';
 				the_excerpt();
 				echo '<p class="readmore"><a href="'. get_permalink($post->ID) . '">View this Position &raquo;</a></p>';
 				echo '</article><hr class="fade-hr">';

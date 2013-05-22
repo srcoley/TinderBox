@@ -291,15 +291,15 @@
 	.hero p b {
 		font-size: em(32,24)
 	}
-	.for-bucket {
+	body.home .for-bucket {
 		float: left;
 		width: 31.9%;
 		margin: em(-48) 0 0 0;
 		margin-left: 2.083333333%;
 		position: relative;
 	}
-	.for-bucket.bucket1,
-	.for-bucket.bucket4 {
+	body.home .for-bucket.bucket1,
+	body.home .for-bucket.bucket4 {
 		margin-left: 0;
 		clear: left
 	}
@@ -317,7 +317,7 @@
 		margin: 0 3.5% 5% 0;
 		width: 8%
 	}
-	.upcoming-event p.upcoming-event-description {
+	.upcoming-event .upcoming-event-description {
 		clear: none;
 		float: left;
 		margin: 0;
@@ -368,6 +368,11 @@
 		width: 65.5%;
 		margin-right: 8%
 	}
+	.contact-address {
+		width: 26.5%;
+		float: left;
+		padding: 0
+	}
 
 	
 	/* Events */
@@ -381,6 +386,10 @@
 	.upcoming-event.events-list p.event-date {
 		width: 10%
 	}
+	.upcoming-event.events-list.single-event {
+		float: right;
+		margin-left: 5.5555555%
+	}
 	.upcoming-event.events-list a.cta {
 		float: left;
 		width: auto;
@@ -388,6 +397,7 @@
 		padding: 0 2em;
 		margin-left: 13.5%
 	}
+	
 	
 	
 }

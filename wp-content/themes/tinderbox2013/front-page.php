@@ -38,18 +38,18 @@ if($rows)
 
 <?php if(get_field('check_here_to_include_an_event_call_out')) {
 	
-	$eventmonth = get_field('home_event_date');
-	$eventday = get_field('home_event_date');
-	$eventmonth = substr($eventmonth, 0, 3);
-	$eventday = substr($eventday, 4, 6);
-	
-	echo '<div class="container"><div class="upcoming-event clearfix"><p class="event-date"><span class="event-month">' . $eventmonth . '</span><span class="event-day">' . $eventday . '</span></p><p class="upcoming-event-tag">Upcoming Event</p><h2>' . get_field('home_event_title') . '</h2><p class="upcoming-event-description">' . get_field('home_event_description') . '</p>';
-	
-	if(get_field('home_event_cta_link')&&get_field('home_event_cta_text')) {
-		echo '<a href="' . get_field('home_event_cta_link') . '" class="cta">' . get_field('home_event_cta_text') . '</a>';
-	}
-	
-	echo '</div></div>';
+	$post = get_field('featured_event');
+	 
+	        setup_postdata($post); 
+
+				$eventmonth = get_field('event_date');
+				$eventday = get_field('event_date');
+				$eventmonth = substr($eventmonth, 0, 3);
+				$eventday = substr($eventday, 4, 6);
+				
+				echo '<div class="container"><div class="upcoming-event clearfix"><p class="event-date"><span class="event-month">' . $eventmonth . '</span><span class="event-day">' . $eventday . '</span></p><p class="upcoming-event-tag">Upcoming Event</p><h2><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2><div class="upcoming-event-description">' . get_the_excerpt() . '</div><a class="cta" href="' . get_permalink() . '">View Event</a></div></div>';
+
+			wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
 	
 } ?>
 

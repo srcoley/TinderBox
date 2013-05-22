@@ -19,6 +19,8 @@
 	position: relative
 }
 .error404 .content h1,
+.archive .content h1,
+.search .content h1,
 .blog .content h1 {
 	margin-top: 0
 }
@@ -69,8 +71,6 @@ article blockquote {
 .page-cta p {
 	font-size: 1em;
 	margin: 0 0 1em;
-	text-align: center;
-	font-weight: 700
 }
 .page-cta p.cta-contain {
 	margin: 0;
@@ -81,7 +81,7 @@ article blockquote {
 	line-height: em(40);
 	height: em(40);
 	display: block;
-	margin: 0 auto;
+	margin: 0;
 	width: 100%;
 	text-align: center;
 	padding: 0;
@@ -110,7 +110,6 @@ article blockquote {
 	font-size: em(16);
 	line-height: em(24,16);
 	margin: 0 0 1.5em;
-	padding-left: 25.4702%;
 }
 .page-bottom-cta a.cta {
 	border-radius: em(20);
@@ -122,7 +121,6 @@ article blockquote {
 	text-align: center;
 	padding: 0;
 }
-
 
 /* Form Elements */
 
@@ -169,7 +167,7 @@ article blockquote {
 	width: 100% !important
 }
 .content input[type="submit"] {
-	background: $orange;
+	background: $blue;
 	color: #fff;
 	height: em(40);
 	line-height: em(40);
@@ -178,9 +176,17 @@ article blockquote {
 	border: none
 }
 .content input[type="submit"]:hover, .content input[type="submit"]:focus {
-	background: shade($orange,10%);
+	background: shade($blue,10%);
 	@include box-shadow(none)
 }
 .contact-address {
 	padding-top: 1.2em
+}
+.contact-address b {
+	font-size: 1.5em;
+	display: block;
+	border-bottom: solid 3px $medgreen;
+	padding-bottom: .25em;
+	margin-bottom: .25em;
+	line-height: 1
 }

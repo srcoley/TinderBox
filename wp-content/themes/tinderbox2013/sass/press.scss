@@ -1,7 +1,7 @@
 /* Main Press Page */
 
-p.the-date {
-	margin: -1em 0 1.5em 0;
+article.press-release p.the-date {
+	margin: -1.5em 0 .75em 0;
 	font-weight: 700;
 	color: #aaa;
 	text-transform: uppercase;
@@ -25,6 +25,12 @@ p.view-all a {
 	font-style: italic;
 	font-weight: 700;
 	color: $blue;
+}
+article.press-release h2 {
+	margin-bottom: .83em;
+}
+article.press-release p {
+	margin: .75em 0;
 }
 article.media-item figure.mediathumb {
 	text-align: center;
@@ -178,8 +184,4 @@ div.videos-contain.extra {
 div.extra.expanded {
 	max-height: 2000px;
 	overflow: auto;
-}
-
-.meta {
-	border-bottom: solid 1px #e6e6e6;
 }

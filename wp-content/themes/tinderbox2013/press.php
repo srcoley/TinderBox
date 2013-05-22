@@ -29,7 +29,7 @@
 			$args = array( 'post_type' => 'pressreleases', 'posts_per_page' => 2 );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
-			    echo '<article><h2><a href="';
+			    echo '<article class="press-release"><h2><a href="';
 			    the_permalink();
 			    echo '">';
 				the_title();
@@ -41,7 +41,7 @@
 				echo '</article><hr class="fade-hr">';
 			endwhile;
 			?>
-			<p class="view-all"><a href="/press-releases">View All Press Releases &raquo;</a></p>
+			<p class="view-all"><a href="<?php echo site_url(); ?>/press-releases">View All Press Releases &raquo;</a></p>
 			
 			<hr class="fade-hr">
 			
@@ -60,7 +60,7 @@
 			}
 			?>
 		
-			<p class="view-all"><a href="/media-coverage">View All Media Coverage &raquo;</a></p>
+			<p class="view-all"><a href="<?php echo site_url(); ?>/media-coverage">View All Media Coverage &raquo;</a></p>
 		
 		</div>
 		

@@ -14,7 +14,7 @@
 			$args = array( 'post_type' => 'pressreleases', 'posts_per_page' => 10, 'nopaging' => 'false'  );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
-			    echo '<article><h2><a href="';
+			    echo '<article class="press-release"><h2><a href="';
 			    the_permalink();
 			    echo '">';
 				the_title();

@@ -65,3 +65,9 @@ img {
 article p {
 	margin: 1.5em 0;
 }
+.alignleft,
+.alignright,
+.aligncenter {
+	display: block;
+	margin: 1.5em auto;
+}

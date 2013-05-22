@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Features
+ * Template Name: How It Works
  */
 ?>
 <?php include (TEMPLATEPATH . '/inc/header.php' ); ?>
@@ -24,23 +24,20 @@
 				<p class="small-intro"><?php the_field('small_intro'); ?></p>
 			<?php } ?>
 			<?php the_content(); ?>
-			<hr class="fade-hr">
-			
-			<?php
-			$rows = get_field('features');
-			if($rows) {
-				foreach($rows as $row) {
-					echo '<div class="feature">';
-					if ($row['feature_image']) {
-						echo '<figure class="alignright"><img src="' . $row['feature_image'] . '" alt="' . $row['feature_name'] . '"/></figure>';
-					}
-					echo '<h2>' . $row['feature_name'] . '</h2>';
-					echo '<div class="feature-description">' . $row['feature_description'] . '</div>';
-					if ($row['feature_cta_text'] && $row['feature_cta_link']) {
-						echo '<div class="page-cta clearfix"><p>' . $row['feature_cta_leadin'] . '</p><p class="cta-contain"><a class="cta" href="' . $row['feature_cta_link'] . '">' . $row['feature_cta_text'] . '</a></p></div>';
-					}
-					
-					echo '</div><hr class="fade-hr">';
+						
+			<?php 
+			$rows = get_field('how_it_works_item');
+			if($rows)
+			{
+				foreach($rows as $row)
+				{
+					echo '<a href="' . $row['how_it_works_cta_link'] . '" />';
+					echo '<div class="for-bucket">';
+					echo '<img src="' . $row['how_it_works_image'] . '"/>';
+					echo '<h2>' . $row['how_it_works_heading'] . '</h2>';
+					echo '<p>' . $row['how_it_works_text'] .'</p>';
+					echo '<p class="bucket-cta">' . $row['how_it_works_cta_text'] . ' &raquo;</p>';
+					echo '</div></a>';
 				}
 			}
 			?>

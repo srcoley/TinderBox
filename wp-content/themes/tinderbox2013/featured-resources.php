@@ -35,12 +35,14 @@
 					} else {
 						$resourcetype = 'Client Story';
 					}				?>
-				<article class="resource primary-featured-resource <?php if ( 'clientstories' == get_post_type() ) { echo 'clientstories'; } else { echo $term_list[0]; } ?>">																	
+				<article class="resource primary-featured-resource <?php if ( 'clientstories' == get_post_type() ) { echo 'clientstories'; } else { echo $term_list[0]; } ?>">						
+															
+					<?php echo '<p class="resource-type">Featured '; ?>
+						<?php if ( 'clientstories' == get_post_type() ) { echo 'Client Story'; } else { echo $term_list[0]; } ?>
+					<?php echo '</p>'; ?>
+
 					<?php if ( has_post_thumbnail() ) { ?>
 						<a href="<?php the_permalink(); ?>"><figure>
-							<?php echo '<p class="resource-type">Featured '; ?>
-								<?php if ( 'clientstories' == get_post_type() ) { echo 'Client Story'; } else { echo $term_list[0]; } ?>
-							<?php echo '</p>'; ?>
 							<?php the_post_thumbnail('blog-thumb'); ?>
 						</figure></a>
 					<?php } ?>
@@ -68,11 +70,12 @@
 						$resourcetype = 'Client Story';
 					}				?>
 				<article class="resource secondary-featured-resource <?php if ( 'clientstories' == get_post_type() ) { echo 'clientstories'; } else { echo $term_list[0]; } ?>">																						
+					<?php echo '<p class="resource-type">'; ?>
+						<?php if ( 'clientstories' == get_post_type() ) { echo 'Client Story'; } else { echo $term_list[0]; } ?>
+					<?php echo '</p>'; ?>
+
 					<?php if ( has_post_thumbnail() ) { ?>
 						<a href="<?php the_permalink(); ?>"><figure>
-							<?php echo '<p class="resource-type">'; ?>
-								<?php if ( 'clientstories' == get_post_type() ) { echo 'Client Story'; } else { echo $term_list[0]; } ?>
-							<?php echo '</p>'; ?>
 							<?php the_post_thumbnail('resource-thumb'); ?>
 						</figure></a>
 					<?php } ?>
@@ -98,12 +101,14 @@
 					} else {
 						$resourcetype = 'Client Story';
 					}				?>
-				<article class="resource secondary-featured-resource <?php if ( 'clientstories' == get_post_type() ) { echo 'clientstories'; } else { echo $term_list[0]; } ?>">																	
+				<article class="resource secondary-featured-resource <?php if ( 'clientstories' == get_post_type() ) { echo 'clientstories'; } else { echo $term_list[0]; } ?>">						
+				
+					<?php echo '<p class="resource-type">'; ?>
+						<?php if ( 'clientstories' == get_post_type() ) { echo 'Client Story'; } else { echo $term_list[0]; } ?>
+					<?php echo '</p>'; ?>
+															
 					<?php if ( has_post_thumbnail() ) { ?>
 						<a href="<?php the_permalink(); ?>"><figure>
-							<?php echo '<p class="resource-type">'; ?>
-								<?php if ( 'clientstories' == get_post_type() ) { echo 'Client Story'; } else { echo $term_list[0]; } ?>
-							<?php echo '</p>'; ?>
 							<?php the_post_thumbnail('resource-thumb'); ?>
 						</figure></a>
 					<?php } ?>											
@@ -120,7 +125,11 @@
 			
 			<?php if(get_field('include_cta')) {
 				
-				echo '<div class="page-bottom-cta clearfix"><figure><img src="' . get_field('cta_image') . '" alt="" /></figure><p class="cta-lead-in">' . get_field('cta_lead_in') . '</p><a class="cta" href="' . get_field('cta_link') . '">' . get_field('cta_button_text') . '</a></div>';
+				echo '<div class="page-bottom-cta clearfix">';
+				if(get_field('cta_image')) {
+					echo '<figure><img src="' . get_field('cta_image') . '" alt="" /></figure>';
+				}
+				echo '<p class="cta-lead-in">' . get_field('cta_lead_in') . '</p><a class="cta" href="' . get_field('cta_link') . '">' . get_field('cta_button_text') . '</a></div>';
 				
 			} ?>
 			

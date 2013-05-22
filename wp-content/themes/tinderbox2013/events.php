@@ -23,35 +23,21 @@
 				<p class="small-intro"><?php the_field('small_intro'); ?></p>
 				<hr class="fade-hr">
 			<?php } ?>				
-					
-			<?php 
-			$rows = get_field('events');
-			if($rows)
-			{
-				foreach($rows as $row)
-				{
-					$eventmonth = $row['event_date'];
-					$eventday = $row['event_date'];
+
+			<?php
+			$args = array( 'post_type' => 'events', 'posts_per_page' => 10, 'nopaging' => 'false'  );
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post();
+
+					$eventmonth = get_field('event_date');
+					$eventday = get_field('event_date');
 					$eventmonth = substr($eventmonth, 0, 3);
 					$eventday = substr($eventday, 4, 6);
 					
-					echo '<div class="upcoming-event events-list clearfix"><p class="event-date"><span class="event-month">' . $eventmonth . '</span><span class="event-day">' . $eventday . '</span></p><h2>' . $row['event_title'] . '</h2><p class="upcoming-event-description">' . $row['event_description'] . '</p>';
+					echo '<div class="upcoming-event events-list clearfix"><p class="event-date"><span class="event-month">' . $eventmonth . '</span><span class="event-day">' . $eventday . '</span></p><h2><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2><p class="upcoming-event-description">' . get_the_excerpt() . '</p></div>';
 					
-					if($row['event_cta_link']&&$row['event_cta_text']) {
-						echo '<a href="' . $row['event_cta_link'] . '" class="cta">' . $row['event_cta_text'] . '</a>';
-					}
-					
-					echo '</div>';
-				}
-			}
+			endwhile;
 			?>
-
-			
-			<?php if(get_field('include_cta')) {
-				
-				echo '<div class="page-bottom-cta clearfix"><figure><img src="' . get_field('cta_image') . '" alt="" /></figure><p class="cta-lead-in">' . get_field('cta_lead_in') . '</p><a class="cta" href="' . get_field('cta_link') . '">' . get_field('cta_button_text') . '</a></div>';
-				
-			} ?>
 			
 		</div>
 		

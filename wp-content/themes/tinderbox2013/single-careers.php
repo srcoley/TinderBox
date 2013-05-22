@@ -20,11 +20,15 @@
 				
 				<?php the_content(); ?>
 					
-				<?php if(get_field('include_cta')) {
-					
-					echo '<div class="page-bottom-cta clearfix"><figure><img src="' . get_field('cta_image') . '" alt="" /></figure><p class="cta-lead-in">' . get_field('cta_lead_in') . '</p><a class="cta" href="' . get_field('cta_link') . '">' . get_field('cta_button_text') . '</a></div>';
-					
-				} ?>
+			<?php if(get_field('include_cta')) {
+				
+				echo '<div class="page-bottom-cta clearfix">';
+				if(get_field('cta_image')) {
+					echo '<figure><img src="' . get_field('cta_image') . '" alt="" /></figure>';
+				}
+				echo '<p class="cta-lead-in">' . get_field('cta_lead_in') . '</p><a class="cta" href="' . get_field('cta_link') . '">' . get_field('cta_button_text') . '</a></div>';
+				
+			} ?>
 									
 			</article>
 

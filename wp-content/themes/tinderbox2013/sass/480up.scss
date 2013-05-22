@@ -16,7 +16,6 @@
 		font-size: em(24);
 		line-height: em(30,24);
 		margin: 0 0 .6666667em;
-		padding-left: 25.4702%;
 	}	
 	.page-bottom-cta a.cta {
 		float: left;
@@ -77,16 +76,23 @@
 	}
 	
 	
-	/* Resources */
+	/* Resources and Two-Col */
 	
+	.two-col,
 	article.resource {
-		width: 40%;
-		margin: 0 5%;
+		width: 44.67%;
+		margin: 0 10.3333333% 0 0;
 		float: left;
 	}	
+	.two-col:nth-child(even),
+	article.resource:nth-child(even) {
+		margin: 0;
+	}
+	.two-col:nth-child(odd),
 	article.resource:nth-child(odd) {
 		clear: left
-	}
+	}	
+	
 	article.resource p {
 		font-size: em(14);
 		line-height: em(24,14)

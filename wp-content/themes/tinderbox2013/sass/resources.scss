@@ -5,9 +5,8 @@ article.resource {
 }
 article.resource figure {
 	@include box-shadow(0 1px 4px rgba(0,0,0,0.2));
-	padding: 3px;
+	padding: 0;
 	background: #fff;
-	position: relative;
 }
 article.resource h2 {
 	margin-top: 1em
@@ -16,7 +15,7 @@ article.primary-featured-resource {
 	background: #fff;
 	box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 	border: none;
-	padding: em(20) 5% em(36);
+	padding: 5%;
 	margin-bottom: em(36)
 }
 article.primary-featured-resource figure {
@@ -28,7 +27,6 @@ article.primary-featured-resource figure img,
 article.secondary-featured-resource figure img,
 article.resource figure img {
 	display: block;
-	position: relative;
 }
 article.primary-featured-resource p.view-resource {
 	margin-bottom: 0
@@ -36,35 +34,13 @@ article.primary-featured-resource p.view-resource {
 article.resource p.resource-type,
 article.secondary-featured-resource p.resource-type,
 article.primary-featured-resource p.resource-type {
-	position: absolute;
-	z-index: 88;
-	left: 6px;
-	top: 6px;
-	margin: 0 0 1em;
-	padding: 0 .5em;
-	font-size: em(10);
+	font-size: em(12);
+	margin: 0 0 1.5em;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #fff;
+	color: $darkgreen;
 	font-weight: 700;
-	line-height: 1.75em;
-	height: 1.5em;
-}
-article.primary-featured-resource p.resource-type {
-	margin: 0 0 em(20,12);
-	font-size: em(12)
-}
-article.Whitepaper p.resource-type {
-	background: #9ED265;
-}
-article.Infographic p.resource-type {
-	background: $blue;
-}
-article.Webinar p.resource-type {
-	background: #b16ec7;
-}
-article.clientstories p.resource-type {
-	background: #6ec7b3
+	border-top: solid 3px $medgreen;
 }
 
 article.clientstories figure {
@@ -79,9 +55,37 @@ article.clientstories figure {
 	padding-bottom: em(44);
 	border-bottom: solid 1px #e6e6e6
 }
+.upcoming-event.events-list.single-event {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
 .upcoming-event.events-list h2 {
 	font-weight: 700;
-	color: $orange;
 	line-height: 1.2;
 	margin-bottom: .5em
+}
+.upcoming-event.events-list h2 a {
+	color: $orange;
+}
+.upcoming-event.events-list h2 a:hover {
+	color: shade($orange,10%);
+}
+
+/* Resources Form */
+
+.pardot-form h2 {
+	margin: 1em 0 .5em;
+}
+.form-contain {
+	padding: 0
+}
+
+/* Careers */
+
+article.career h2 {
+	margin-bottom: .25em
+}
+article.career p {
+	margin: 0 0 .75em;
 }

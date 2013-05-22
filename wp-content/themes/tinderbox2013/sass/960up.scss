@@ -53,5 +53,20 @@
 	.client-stats-inner {
 		padding-left: 2.5em;
 	}
+
 	
+	/* Page CTA */
+	
+	.page-cta p {
+		width: 59%;
+		margin: 0 5.555555% 0 0;
+		float: left
+	}
+	.page-cta p.cta-contain {
+		width: 35%;
+		float: left
+	}
+	.page-cta a.cta {
+		width: 100%
+	}	
 }

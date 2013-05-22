@@ -1,6 +1,12 @@
+.archive article,
+.search article,
 .blog article {
 	margin-bottom: em(24);
 	padding-bottom: em(24);
+}
+.post-type-archive-pressreleases article {
+	margin: 0;
+	padding: 0
 }
 .archive .excerpt-contain,
 .search .excerpt-contain,
@@ -14,9 +20,6 @@
 	padding: em(10);
 	text-align: center
 }
-.blog .excerpt-contain figure {
-	text-align: center
-}
 .blog .excerpt-contain p {
 	margin: 1.5em 0;
 }
@@ -24,6 +27,8 @@
 	margin-bottom: 0;
 	font-weight: 700;
 }
+.archive article h2,
+.search article h2,
 .blog article h2,
 .single article h1.post-title {
 	font-size: em(30);
@@ -39,6 +44,9 @@
 	line-height: em(48,14);
 	border-top: solid 1px #e6e6e6;
 	color: $darkgray;
+}
+.single .meta {
+	border-bottom: solid 1px #e6e6e6;
 }
 .meta a {
 	color: $darkgreen

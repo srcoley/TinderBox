@@ -24,15 +24,20 @@
     	<![endif]-->
     	
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">    	
-
-		<!--[if lt IE 9]>
-			<script src="<?php bloginfo('template_directory'); ?>/js/vendor/selectivizr-min.js"></script>
-			<script src="<?php bloginfo('template_directory'); ?>/js/vendor/borderBoxModel-min.js" type="text/javascript"></script>
-			<script src="<?php bloginfo('template_directory'); ?>/js/vendor/respond.min.js" type="text/javascript"></script>
-    	<![endif]-->
 			
 		<?php wp_head(); ?>
 		
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script src="<?php bloginfo('template_directory'); ?>/js/vendor/selectivizr.js"></script>
+    	<![endif]-->
+		<!--[if lt IE 8]>
+			<script src="<?php bloginfo('template_directory'); ?>/js/vendor/borderBoxModel-min.js" type="text/javascript"></script>
+    	<![endif]-->
+
+		<!--[if lt IE 9]>
+			<script src="<?php bloginfo('template_directory'); ?>/js/vendor/respond.min.js" type="text/javascript"></script>
+    	<![endif]-->
+
 	</head>
 
 	<body <?php body_class(); ?>>

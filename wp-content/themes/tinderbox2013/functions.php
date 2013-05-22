@@ -51,6 +51,7 @@ register_nav_menu( 'footer', __( 'Footer Menu', 'tinderbox' ) );
 // Add Custom Post Types
 require_once(TEMPLATEPATH . '/custom-post-types/client-stories.php');
 require_once(TEMPLATEPATH . '/custom-post-types/careers.php');
+require_once(TEMPLATEPATH . '/custom-post-types/events.php');
 require_once(TEMPLATEPATH . '/custom-post-types/resources.php');
 require_once(TEMPLATEPATH . '/custom-post-types/pressreleases.php');
 
