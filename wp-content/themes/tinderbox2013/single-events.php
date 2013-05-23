@@ -10,12 +10,7 @@
 	
 			<div class="title-background"></div>
 							
-			<h2 class="page-title">
-				<?php
-				$term_list = wp_get_post_terms($post->ID, 'type', array("fields" => "names"));
-				echo $term_list[0];
-				?>
-			</h2>
+			<h2 class="page-title">Upcoming Event</h2>
 
 			<article>
 			
