@@ -14,7 +14,7 @@
 			
 			<p class="large-intro"><?php the_field('client_intro_text'); ?></p>
 		
-			<?php if (get_field('close_rate')) { ?>	
+			<?php if (get_field('rate_value')) { ?>	
 				<div class="client-stats clearfix">
 
 					<figure>
