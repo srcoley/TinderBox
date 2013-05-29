@@ -41,7 +41,7 @@
 		
 		// Usage:
 				
-		echo '<h2 class="parent-title"><a href="' . site_url() . '/press">Recent Press</a></h2>';
+		echo '<h2 class="parent-title"><a href="' . site_url() . '/press-section">Recent Press</a></h2>';
 		
 		$args = array(
 		    'menu'    => 'Footer Nav',

@@ -15,7 +15,12 @@
 					<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
 					
 					<div class="excerpt-contain">
-						<?php if ( has_post_thumbnail() ) { ?>
+
+						<?php					
+						$cutoffdate = '2013-03-28';
+						$postdate = the_date('Y-m-d','','',false);
+						if ($postdate < $cutoffdate && has_post_thumbnail() ) {					
+						?>
 							<figure>
 								<?php the_post_thumbnail('blog-thumb'); ?>
 							</figure>

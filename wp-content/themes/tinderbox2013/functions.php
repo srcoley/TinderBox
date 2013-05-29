@@ -37,7 +37,7 @@ if ( function_exists('register_sidebar') ) {
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 65, 65, true );	
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'blog-thumb', 672, 363, false ); //(not cropped)
+	add_image_size( 'blog-thumb', 700, 350, false ); //(not cropped)
 	add_image_size( 'client-thumb', 240, 120, false ); //(not cropped)
 	add_image_size( 'media-thumb', 200, 105, false ); //(not cropped)
 	add_image_size( 'library-thumb', 230, 150, true ); //(cropped)
