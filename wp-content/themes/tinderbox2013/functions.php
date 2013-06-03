@@ -31,6 +31,12 @@ if ( function_exists('register_sidebar') ) {
 		'before_title' => '<h2 class="widgettitle">',
 		'after_title' => '</h2>',
 	));
+	register_sidebar(array('name'=>'Default Sidebar',
+		'before_widget' => '<div class="innersidebar">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
 }
 
 // Set up Post Thumbnails
