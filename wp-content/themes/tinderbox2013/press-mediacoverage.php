@@ -25,9 +25,9 @@
 			<?php } ?>						
 		
 			<?php
-			$bookmarks = get_bookmarks( array(
-							'orderby'        => 'date',
-							'order'          => 'DESC'
+			$bookmarks = mylinkorder_get_bookmarks( array(
+							'orderby'			=> 'order',
+							'category_orderby'	=> 'order'
 			                          ));
 			
 			// Loop through each bookmark and print formatted output
