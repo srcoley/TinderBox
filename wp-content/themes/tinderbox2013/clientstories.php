@@ -7,7 +7,7 @@
 
 	<div class="container">
 			
-		<?php include (TEMPLATEPATH . '/inc/sidebar.php' ); ?>
+		<?php include (TEMPLATEPATH . '/inc/resources-sidebar.php' ); ?>
 		
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		
