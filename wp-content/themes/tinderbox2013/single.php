@@ -29,6 +29,8 @@
 					</div>
 				</article>
 	
+				<div id="comments"></div>
+				
 			<?php endwhile; ?>
 			
 		</div>
