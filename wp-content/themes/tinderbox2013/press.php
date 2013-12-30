@@ -17,6 +17,8 @@
 			<div class="title-background"></div>
 		
 			<h1><?php the_title(); ?></h1>
+
+			<?php include (TEMPLATEPATH . '/inc/page-cta.php' ); ?>
 			
 			<?php if(get_field('large_intro') || get_field('small_intro')) { ?>
 				<p class="large-intro"><?php the_field('large_intro'); ?></p>
@@ -49,7 +51,7 @@
 		
 			<?php
 			$bookmarks = get_bookmarks( array(
-							'orderby'        => 'name',
+							'orderby'        => 'link_id',
 							'order'          => 'ASC',
 							'limit'          => '3'
 			                          ));
