@@ -9,6 +9,8 @@
 				<div class="title-background"></div>
 		
 				<h1>The TinderBox Blog</h1>	
+
+				<?php include (TEMPLATEPATH . '/inc/page-cta.php' ); ?>
 		
 				<?php while ( have_posts() ) : the_post(); ?>
 		
