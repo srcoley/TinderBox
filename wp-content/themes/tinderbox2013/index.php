@@ -6,12 +6,14 @@
 		
 			<?php if ( have_posts() ): ?>
 			
-				<div class="title-background"></div>
+				<div class="title-background">
+				  <div class="container">
+    				<?php include (TEMPLATEPATH . '/inc/page-cta.php' ); ?>				
+				  </div>
+				</div>
 		
 				<h1>The TinderBox Blog</h1>	
-
-				<?php include (TEMPLATEPATH . '/inc/page-cta.php' ); ?>
-		
+				
 				<?php while ( have_posts() ) : the_post(); ?>
 		
 					<article>
