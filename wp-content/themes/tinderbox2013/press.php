@@ -52,7 +52,7 @@
 			<?php
 			$bookmarks = get_bookmarks( array(
 							'orderby'        => 'link_id',
-							'order'          => 'ASC',
+							'order'          => 'DESC',
 							'limit'          => '3'
 			                          ));
 			
