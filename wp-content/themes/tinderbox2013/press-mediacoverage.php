@@ -18,6 +18,8 @@
 
 			<h1><?php the_title(); ?></h1>
 
+			<?php include (TEMPLATEPATH . '/inc/page-cta.php' ); ?>
+
 			<?php if(get_field('large_intro') || get_field('small_intro')) { ?>
 				<p class="large-intro"><?php the_field('large_intro'); ?></p>
 				<p class="small-intro"><?php the_field('small_intro'); ?></p>
@@ -26,8 +28,8 @@
 		
 			<?php
 			$bookmarks = mylinkorder_get_bookmarks( array(
-							'orderby'			=> 'order',
-							'category_orderby'	=> 'order'
+							'orderby'        => 'link_id',
+							'order'          => 'DESC'
 			                          ));
 			
 			// Loop through each bookmark and print formatted output
