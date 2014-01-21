@@ -50,15 +50,15 @@
 			<h2 class="section-title">Recent Media Coverage</h2>
 		
 			<?php
-			$bookmarks = get_bookmarks( array(
-							'orderby'        => 'link_id',
-							'order'          => 'DESC',
+			$bookmarks = mylinkorder_get_bookmarks( array(
+							'orderby'        => 'order',
+							'category_orderby' => 'order',
 							'limit'          => '3'
 			                          ));
 			
 			// Loop through each bookmark and print formatted output
 			foreach ( $bookmarks as $bm ) { 
-			    printf( '<article class="media-item clearfix"><a target="_blank" href="%s"><figure class="mediathumb"><img src="%s" alt="%s" /></figure></a><h2><a target="_blank" href="%s">%s</a></h2></article><hr class="fade-hr">', $bm->link_url, $bm->link_image, __($bm->link_name), $bm->link_url, __($bm->link_name) );
+			    printf( '<article class="media-item clearfix"><a target="_blank" href="%s"><figure class="mediathumb"><img src="%s" alt="%s" /></figure></a><h2><a target="_blank" href="%s">%s</a></h2><p class="the-date">%s</p></article><hr class="fade-hr">', $bm->link_url, $bm->link_image, __($bm->link_name), $bm->link_url, __($bm->link_name), __($bm->link_description) );
 			}
 			?>
 		

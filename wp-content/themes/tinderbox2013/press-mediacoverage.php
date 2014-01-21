@@ -28,8 +28,8 @@
 		
 			<?php
 			$bookmarks = mylinkorder_get_bookmarks( array(
-							'orderby'        => 'link_id',
-							'order'          => 'DESC'
+							'orderby'        => 'order',
+							'category_orderby' => 'order'
 			                          ));
 			
 			// Loop through each bookmark and print formatted output
