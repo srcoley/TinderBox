@@ -17,6 +17,8 @@
 			<div class="title-background"></div>
 		
 			<h1><?php the_title(); ?></h1>
+
+			<?php include (TEMPLATEPATH . '/inc/page-cta.php' ); ?>
 			
 			<?php if(get_field('large_intro') || get_field('small_intro')) { ?>
 				<p class="large-intro"><?php the_field('large_intro'); ?></p>
@@ -35,7 +37,7 @@
 				$type = 'webinar';		
 			}
 			
-			$args = array( 'post_type' => 'resources', 'type' => $type );
+			$args = array( 'post_type' => 'resources', 'type' => $type, 'posts_per_page' => -1 );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
 					if ( 'clientstories' != get_post_type() ) { 
@@ -46,9 +48,7 @@
 					}
 				?>
 				<article class="resource <?php if ( 'clientstories' == get_post_type() ) { echo 'clientstories'; } else { echo $term_list[0]; } ?>">																	
-					<?php echo '<p class="resource-type">'; ?>
-						<?php if ( 'clientstories' == get_post_type() ) { echo 'Client Story'; } else { echo $term_list[0]; } ?>
-					<?php echo '</p>'; ?>
+					<?php echo '<p class="resource-type"></p>'; ?>
 
 					<?php if ( has_post_thumbnail() ) { ?>
 						<a href="<?php the_permalink(); ?>"><figure>						
@@ -57,7 +57,6 @@
 					<?php } ?>
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					<?php the_excerpt(); ?>
-					<p class="view-resource"><a href="<?php the_permalink(); ?>">View <?php echo $resourcetype; ?> &raquo;</a></p>
 				</article>
 							
 			<?php endwhile; ?>
